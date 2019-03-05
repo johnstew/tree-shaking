@@ -1,7 +1,15 @@
-export function square(x) {
-  return x * x;
+
+class MyMath {
+
+  square(x) {
+    return x * x;
+  }
+  
+  cube(x) {
+    return x * x * x;
+  }
 }
 
-export function cube(x) {
-  return x * x * x;
-}
+const myMath = new MyMath();
+
+export default myMath;

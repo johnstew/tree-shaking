@@ -45,6 +45,14 @@
   }, n.p = "", n(n.s = 0)
 }([function (e, t, n) {
   "use strict";
-  var r, o;
-  n.r(t), document.body.appendChild((o = document.createElement("div"), (o = document.createElement("pre")).innerHTML = ["Hello webpack!", "5 cubed is equal to " + (r = 5, r * r * r)].join("\n\n"), o))
+  n.r(t);
+  var r, o = new class {
+    square(e) {
+      return e * e
+    }
+    cube(e) {
+      return e * e * e
+    }
+  };
+  document.body.appendChild((r = document.createElement("div"), (r = document.createElement("pre")).innerHTML = ["Hello webpack!", "5 cubed is equal to " + o.cube(5)].join("\n\n"), r))
 }]);

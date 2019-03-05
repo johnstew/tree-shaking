@@ -34,9 +34,9 @@
       }.bind(null, key));
     return ns
   }, __webpack_require__.n = function (module) {
-    var getter = module && module.__esModule ? function () {
+    var getter = module && module.__esModule ? function getDefault() {
       return module.default
-    } : function () {
+    } : function getModuleExports() {
       return module
     };
     return __webpack_require__.d(getter, "a", getter), getter
@@ -45,12 +45,17 @@
   }, __webpack_require__.p = "", __webpack_require__(__webpack_require__.s = 0)
 }([function (module, __webpack_exports__, __webpack_require__) {
   "use strict";
-
-  function cube(x) {
-    return x * x * x
-  }
-  __webpack_require__.r(__webpack_exports__), document.body.appendChild(function () {
+  __webpack_require__.r(__webpack_exports__);
+  var math = new class MyMath {
+    square(x) {
+      return x * x
+    }
+    cube(x) {
+      return x * x * x
+    }
+  };
+  document.body.appendChild(function component() {
     var element = document.createElement("div");
-    return (element = document.createElement("pre")).innerHTML = ["Hello webpack!", "5 cubed is equal to " + cube(5)].join("\n\n"), element
+    return (element = document.createElement("pre")).innerHTML = ["Hello webpack!", "5 cubed is equal to " + math.cube(5)].join("\n\n"), element
   }())
 }]);

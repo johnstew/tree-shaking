@@ -105,7 +105,7 @@ function component() {
 
   element.innerHTML = [
      'Hello webpack!',
-     '5 cubed is equal to ' + Object(_math_js__WEBPACK_IMPORTED_MODULE_0__[/* cube */ "a"])(5)
+     '5 cubed is equal to ' + _math_js__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].cube(5)
   ].join('\n\n');
 
     return element;
@@ -119,20 +119,26 @@ document.body.appendChild(component());
 /*!*********************!*\
   !*** ./src/math.js ***!
   \*********************/
-/*! exports provided: square, cube */
-/*! exports used: cube */
+/*! exports provided: default */
+/*! exports used: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* unused harmony export square */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return cube; });
-function square(x) {
-  return x * x;
+
+class MyMath {
+
+  square(x) {
+    return x * x;
+  }
+  
+  cube(x) {
+    return x * x * x;
+  }
 }
 
-function cube(x) {
-  return x * x * x;
-}
+const myMath = new MyMath();
+
+/* harmony default export */ __webpack_exports__["a"] = (myMath);
 
 /***/ })
 

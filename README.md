@@ -11,3 +11,9 @@ I attempted to beautify it as much as I could.
 ## Step 1
 
 This is basically the tutorial still. So I have the `math.js` that exports two functions and I only use one of them as part of my app. These are named exports and pretty easy for webpack to identify.
+
+## Step 2
+
+Changed the `math.js` code to use a class and have a default export.
+
+
